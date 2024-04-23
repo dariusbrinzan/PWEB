@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { fixtureInterface } from './fixtureInterface';
+import { fixtureInterface } from './fixtureInteface';
 
 @Injectable({
   providedIn: 'root'
@@ -41,5 +41,4 @@ export class TicketService {
     const url = `http://localhost:30711/api/Ticket/delete_tickets/${match_id}/${stand}/${nr}`;
     return this.http.delete(url, { headers: this.getHeaders(token) });
   }
-
 }
