@@ -24,6 +24,7 @@ namespace LiverpoolWebsite.Controllers
         // endpoint pentru a returna biletele tuturor
         // meciurilor nedisputate inca (game_date > current_date)
         [HttpGet("get_all_tickets")]
+        [Authorize]
         public async Task<IActionResult> GetMatchTickets()
         {
             List<FixtureModel> list = await _ticketManager.GetTickets();
