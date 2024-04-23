@@ -1,0 +1,26 @@
+#log-out {
+    display: block;
+    margin: auto;
+    background-color: #c80f42;
+    color: white;
+    border: 1px solid white;
+    font-size: 20px;
+}
+
+h2 {
+    margin: 100px;
+    text-align: center;
+    color: #c80f42;
+}
+#authForm {
+    display: grid;
+    width: 20%;
+    grid-template-columns: 100%;
+    grid-row-gap: 20px;
+    margin: 100px auto;
+}
+
+#authForm input {
+    float: right;
+}
+

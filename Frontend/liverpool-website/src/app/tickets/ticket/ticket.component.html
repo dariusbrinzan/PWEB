@@ -1,0 +1,72 @@
+<ul *ngIf="attr != 'null'; else admin" id="match-list">
+  <li class="matchFormat" *ngFor="let fixture of fixtures">
+    <div>
+      <h4>{{fixture.matchInfo}}</h4>
+      <p *ngFor="let st of fixture.tickets">{{st.stand}}: {{st.seats}}</p>
+    </div>
+    <img src="/assets/images/Teams/{{fixture.teamPhoto}}" alt="Team Logo">
+  </li>
+</ul>
+
+<ng-template #admin>
+  <h2>Manage tickets</h2>
+  <div id="btns">
+    <div *ngFor="let adm of adminOpt">
+      <a routerLink="/Tickets/Admin/{{adm}}">
+        {{adm}}
+      </a>
+    </div>
+  </div>
+
+  <form *ngIf="adminOptParam == 'Create' || adminOptParam == 'Delete'" id="createForm" [formGroup]="formCreateDelete"
+    (ngSubmit)="onSubmit()">
+    <div>
+      <label for="MatchId">
+        MatchId
+      </label>
+      <input id="MatchId" type="number" formControlName="MatchId">
+    </div>
+    <div>
+      <label for="Stand">
+        Stand
+      </label>
+      <input id="Stand" type="string" formControlName="Stand">
+    </div>
+    <div>
+      <label for="Nr">
+        Seats
+      </label>
+      <input id="Nr" type="number" formControlName="Nr">
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+
+  <form *ngIf="adminOptParam == 'Update'" id="createForm" [formGroup]="formUpdate" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="MatchId">
+        MatchId
+      </label>
+      <input id="MatchId" type="number" formControlName="MatchId">
+    </div>
+    <div>
+      <label for="OldStand">
+        OldStand
+      </label>
+      <input id="OldStand" type="string" formControlName="OldStand">
+    </div>
+    <div>
+      <label for="NewStand">
+        NewStand
+      </label>
+      <input id="NewStand" type="string" formControlName="NewStand">
+    </div>
+    <div>
+      <label for="Nr">
+        Seats
+      </label>
+      <input id="Nr" type="number" formControlName="Nr">
+    </div>
+    <button type="submit">Submit</button>
+
+  </form>
+</ng-template>

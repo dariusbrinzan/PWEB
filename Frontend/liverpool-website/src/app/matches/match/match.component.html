@@ -1,0 +1,130 @@
+<ul *ngIf="posAttr != 'null'; else admin" id="match-list">
+  <li class="matchFormat" *ngFor="let match of matches">
+    <h4>{{match.matchDate | date:'shortDate'}}, {{match.stadium}}</h4>
+    <div *ngIf="match.homeOrAway; else away">
+      <img src="{{liverpoolCrest}}" alt="Liverpool Logo">
+      <p>Liverpool</p>
+      <p class="result">{{match.goalsFor}} - {{match.goalsAgainst}}</p>
+      <p>{{match.opponent}}</p>
+      <img src="/assets/images/Teams/{{match.photoUrl}}" alt="Team Logo">
+    </div>
+    <ng-template #away>
+      <div>
+        <img src="/assets/images/Teams/{{match.photoUrl}}" alt="Team Logo">
+        <p>{{match.opponent}}</p>
+        <p class="result">{{match.goalsAgainst}} - {{match.goalsFor}}</p>
+        <p>Liverpool</p>
+        <img src="{{liverpoolCrest}}" alt="Liverpool Logo">
+      </div>
+    </ng-template>
+  </li>
+</ul>
+
+<ng-template #admin>
+  <h2>Manage matches</h2>
+  <div id="btns">
+    <div *ngFor="let adm of adminOpt">
+      <a routerLink="/Fixtures/Admin/{{adm}}">
+        {{adm}}
+      </a>
+    </div>
+  </div>
+
+  <form *ngIf="adminOptParam == 'Create'" id="createForm" [formGroup]="formCreate" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="TeamId">
+        TeamId
+      </label>
+      <input id="TeamId" type="number" formControlName="TeamId">
+    </div>
+    <div>
+      <label for="HomeOrAway">
+        HomeOrAway
+      </label>
+      <input id="HomeOrAway" type="bool" formControlName="HomeOrAway">
+    </div>
+    <div>
+      <label for="GoalsFor">
+        GoalsFor
+      </label>
+      <input id="GoalsFor" type="number" formControlName="GoalsFor">
+    </div>
+    <div>
+      <label for="GoalsAgainst">
+        GoalsAgainst
+      </label>
+      <input id="GoalsAgainst" type="number" formControlName="GoalsAgainst">
+    </div>
+    <div>
+      <label for="CompetitionId">
+        CompetitionId
+      </label>
+      <input id="CompetitionId" type="number" formControlName="CompetitionId">
+    </div>
+    <div>
+      <label for="MatchDate">
+        MatchDate
+      </label>
+      <input id="MatchDate" type="date" formControlName="MatchDate">
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+
+  <form *ngIf="adminOptParam == 'Update'" id="createForm" [formGroup]="formUpdate" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="MatchId">
+        MatchId
+      </label>
+      <input id="MatchId" type="number" formControlName="MatchId">
+    </div>
+    <div>
+      <label for="TeamId">
+        TeamId
+      </label>
+      <input id="TeamId" type="number" formControlName="TeamId">
+    </div>
+    <div>
+      <label for="HomeOrAway">
+        HomeOrAway
+      </label>
+      <input id="HomeOrAway" type="bool" formControlName="HomeOrAway">
+    </div>
+    <div>
+      <label for="GoalsFor">
+        GoalsFor
+      </label>
+      <input id="GoalsFor" type="number" formControlName="GoalsFor">
+    </div>
+    <div>
+      <label for="GoalsAgainst">
+        GoalsAgainst
+      </label>
+      <input id="GoalsAgainst" type="number" formControlName="GoalsAgainst">
+    </div>
+    <div>
+      <label for="CompetitionId">
+        CompetitionId
+      </label>
+      <input id="CompetitionId" type="number" formControlName="CompetitionId">
+    </div>
+    <div>
+      <label for="MatchDate">
+        MatchDate
+      </label>
+      <input id="MatchDate" type="date" formControlName="MatchDate">
+    </div>
+    <button type="submit">Submit</button>
+
+  </form>
+
+  <form *ngIf="adminOptParam == 'Delete' " id="createForm" [formGroup]="formDelete" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="MatchId">
+        MatchId
+      </label>
+      <input id="MatchId" type="number" formControlName="MatchId">
+    </div>
+    <button type="submit">Submit</button>
+
+  </form>
+</ng-template>

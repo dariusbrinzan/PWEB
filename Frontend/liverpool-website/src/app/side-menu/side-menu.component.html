@@ -1,0 +1,22 @@
+<div id="sidebar">
+    <header> Menu </header>
+    <ul>
+        <li *ngFor="let option of options">
+            <a *ngIf="!(option.subOptions.length); else simple" class="options" routerLink="/{{option.optName}}" (click)="clicked(option)">
+                {{option.optName}}
+            </a>
+            <ng-template #simple>
+                <a class="options" (click)="clicked(option)">
+                    {{option.optName}}
+                </a>
+            </ng-template>
+            <ul *ngIf="option.selected && option.subOptions">
+                <li *ngFor="let subOpt of option.subOptions">
+                    <a class="subOptions" routerLink="/{{option.optName}}/{{subOpt}}">
+                        {{subOpt}}
+                    </a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>

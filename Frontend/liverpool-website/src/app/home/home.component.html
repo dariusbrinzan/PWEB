@@ -1,0 +1,14 @@
+<div id="wrapper">
+    <div id="description">
+        <p> Liverpool Football Club is one of the most successful teams in England. 
+            Domestically, the club has won nineteen League titles, seven FA Cups, 
+            a record eight League Cups and fifteen FA Community Shields. In international 
+            competitions, the club has won six European Cups, more than any other English 
+            club, three UEFA Cups, four UEFA Super Cups (also English records) and one FIFA Club World Cup.</p>   
+    </div>
+    <div id="trophies">
+        <div *ngFor="let image of images">
+            <img class="trophy" src={{image}} alt="trophy" />
+        </div>
+    </div>
+</div>

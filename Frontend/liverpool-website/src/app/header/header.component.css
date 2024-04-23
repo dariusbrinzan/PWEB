@@ -1,0 +1,26 @@
+.header {
+    width: 100%;
+    height: 100px;
+    background-color: #c80f2e;
+    display: grid;
+    grid-template-columns: auto 150px 150px 150px;
+}
+
+#crest {
+    height: 100px;
+}
+
+#shanklyGates {
+    height: 100px;
+}
+
+#title {
+    color: aliceblue;
+    margin: auto 20px;
+    font-size: 30px;;
+}
+
+.logo {
+    margin: auto;
+    height: 50px;
+}

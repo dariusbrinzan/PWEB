@@ -1,0 +1,139 @@
+<ul *ngIf="posAttr != 'null'; else admin" id="player-list">
+    <li class="player" *ngFor="let player of players" (click)="showDetails(player)">
+        <p>
+            <span>{{player.shirtNumber}}</span> {{player.name}}
+        </p>
+        <div *ngIf="player.selected" class="details">
+            <img class="playerImg" src="/assets/images/Players/{{player.photoUrl}}" alt="{{player.name}}">
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <td>{{player.name}}</td>
+                    <th>Shirt Number</th>
+                    <td>{{player.shirtNumber}}</td>
+                </tr>
+                <tr>
+                    <th>Age</th>
+                    <td>{{player.age}}</td>
+                    <th>Appearances</th>
+                    <td>{{player.app}}</td>
+                </tr>
+                <tr>
+                    <th>Nationality</th>
+                    <td>{{player.nationality}}</td>
+                    <th>Goals Scored</th>
+                    <td>{{player.goals}}</td>
+                </tr>
+            </table>
+        </div>
+    </li>
+</ul>
+
+<ng-template #admin>
+    <h2>Manage players</h2>
+    <div id="btns">
+        <div *ngFor="let adm of adminOpt">
+            <a routerLink="/Squad/Admin/{{adm}}">
+                {{adm}}
+            </a>
+        </div>
+    </div>
+
+
+
+    <form *ngIf="adminOptParam == 'Create'" id="createForm" [formGroup]="formCreate" (ngSubmit)="onSubmit()">
+        <div>
+            <label for="name">
+                Name
+            </label>
+            <input id="name" type="text" formControlName="Name">
+        </div>
+        <div>
+            <label for="birthDate">
+                BirthDate
+            </label>
+            <input id="birthDate" type="date" formControlName="BirthDate">
+        </div>
+        <div>
+            <label for="nationality">
+                Nationality
+            </label>
+            <input id="nationality" type="text" formControlName="Nationality">
+        </div>
+        <div>
+            <label for="position">
+                Position
+            </label>
+            <input id="position" type="text" formControlName="Position">
+        </div>
+        <div>
+            <label for="shirtNumber">
+                ShirtNumber
+            </label>
+            <input id="shirtNumber" type="number" formControlName="ShirtNumber">
+        </div>
+        <div>
+            <label for="photoUrl">
+                PhotoUrl
+            </label>
+            <input id="photoUrl" type="text" formControlName="PhotoUrl">
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+
+    <form *ngIf="adminOptParam == 'Update'" id="createForm" [formGroup]="formUpdate" (ngSubmit)="onSubmit()">
+        <div>
+            <label for="playerId">
+                Player Id
+            </label>
+            <input id="name" type="number" formControlName="PlayerId">
+        </div>
+        <div>
+            <label for="name">
+                Name
+            </label>
+            <input id="name" type="text" formControlName="Name">
+        </div>
+        <div>
+            <label for="birthDate">
+                BirthDate
+            </label>
+            <input id="birthDate" type="date" formControlName="BirthDate">
+        </div>
+        <div>
+            <label for="nationality">
+                Nationality
+            </label>
+            <input id="nationality" type="text" formControlName="Nationality">
+        </div>
+        <div>
+            <label for="position">
+                Position
+            </label>
+            <input id="position" type="text" formControlName="Position">
+        </div>
+        <div>
+            <label for="shirtNumber">
+                ShirtNumber
+            </label>
+            <input id="shirtNumber" type="number" formControlName="ShirtNumber">
+        </div>
+        <div>
+            <label for="photoUrl">
+                PhotoUrl
+            </label>
+            <input id="photoUrl" type="text" formControlName="PhotoUrl">
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+
+    <form *ngIf="adminOptParam == 'Delete' " id="createForm" [formGroup]="formDelete" (ngSubmit)="onSubmit()">
+        <div>
+            <label for="player_id">
+                PlayerId
+            </label>
+            <input id="player_id" type="number" formControlName="PlayerId">
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</ng-template>

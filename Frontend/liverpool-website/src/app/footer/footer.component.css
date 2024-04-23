@@ -1,0 +1,17 @@
+#footer {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 100%;
+    background-color:  #c80f2e;
+  }
+
+  .fa-facebook, .fa-instagram, .fa-tiktok, .fa-twitter {
+    margin-top: 30px;
+    text-decoration: none;
+    color: white;
+    font-size: 40px;
+  }
