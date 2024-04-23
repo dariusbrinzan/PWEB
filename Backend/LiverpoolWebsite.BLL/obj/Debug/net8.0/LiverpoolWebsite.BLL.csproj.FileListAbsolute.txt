@@ -1,0 +1,17 @@
+/Users/brinzandarius/Desktop/PWEB/Project_Rotaru_Radu_Stefan_Backend/LiverpoolWebsite.BLL/bin/Debug/net8.0/LiverpoolWebsite.BLL.deps.json
+/Users/brinzandarius/Desktop/PWEB/Project_Rotaru_Radu_Stefan_Backend/LiverpoolWebsite.BLL/bin/Debug/net8.0/LiverpoolWebsite.BLL.runtimeconfig.json
+/Users/brinzandarius/Desktop/PWEB/Project_Rotaru_Radu_Stefan_Backend/LiverpoolWebsite.BLL/bin/Debug/net8.0/LiverpoolWebsite.BLL.dll
+/Users/brinzandarius/Desktop/PWEB/Project_Rotaru_Radu_Stefan_Backend/LiverpoolWebsite.BLL/bin/Debug/net8.0/LiverpoolWebsite.BLL.pdb
+/Users/brinzandarius/Desktop/PWEB/Project_Rotaru_Radu_Stefan_Backend/LiverpoolWebsite.BLL/bin/Debug/net8.0/LiverpoolWebsite.DAL.dll
+/Users/brinzandarius/Desktop/PWEB/Project_Rotaru_Radu_Stefan_Backend/LiverpoolWebsite.BLL/bin/Debug/net8.0/LiverpoolWebsite.DAL.pdb
+/Users/brinzandarius/Desktop/PWEB/Project_Rotaru_Radu_Stefan_Backend/LiverpoolWebsite.BLL/obj/Debug/net8.0/LiverpoolWebsite.BLL.csproj.AssemblyReference.cache
+/Users/brinzandarius/Desktop/PWEB/Project_Rotaru_Radu_Stefan_Backend/LiverpoolWebsite.BLL/obj/Debug/net8.0/LiverpoolWebsite.BLL.GeneratedMSBuildEditorConfig.editorconfig
+/Users/brinzandarius/Desktop/PWEB/Project_Rotaru_Radu_Stefan_Backend/LiverpoolWebsite.BLL/obj/Debug/net8.0/LiverpoolWebsite.BLL.AssemblyInfoInputs.cache
+/Users/brinzandarius/Desktop/PWEB/Project_Rotaru_Radu_Stefan_Backend/LiverpoolWebsite.BLL/obj/Debug/net8.0/LiverpoolWebsite.BLL.AssemblyInfo.cs
+/Users/brinzandarius/Desktop/PWEB/Project_Rotaru_Radu_Stefan_Backend/LiverpoolWebsite.BLL/obj/Debug/net8.0/LiverpoolWebsite.BLL.csproj.CoreCompileInputs.cache
+/Users/brinzandarius/Desktop/PWEB/Project_Rotaru_Radu_Stefan_Backend/LiverpoolWebsite.BLL/obj/Debug/net8.0/Liverpoo.59F4308C.Up2Date
+/Users/brinzandarius/Desktop/PWEB/Project_Rotaru_Radu_Stefan_Backend/LiverpoolWebsite.BLL/obj/Debug/net8.0/LiverpoolWebsite.BLL.dll
+/Users/brinzandarius/Desktop/PWEB/Project_Rotaru_Radu_Stefan_Backend/LiverpoolWebsite.BLL/obj/Debug/net8.0/refint/LiverpoolWebsite.BLL.dll
+/Users/brinzandarius/Desktop/PWEB/Project_Rotaru_Radu_Stefan_Backend/LiverpoolWebsite.BLL/obj/Debug/net8.0/LiverpoolWebsite.BLL.pdb
+/Users/brinzandarius/Desktop/PWEB/Project_Rotaru_Radu_Stefan_Backend/LiverpoolWebsite.BLL/obj/Debug/net8.0/LiverpoolWebsite.BLL.genruntimeconfig.cache
+/Users/brinzandarius/Desktop/PWEB/Project_Rotaru_Radu_Stefan_Backend/LiverpoolWebsite.BLL/obj/Debug/net8.0/ref/LiverpoolWebsite.BLL.dll

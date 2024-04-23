@@ -1,0 +1,14 @@
+/Users/brinzandarius/Desktop/PWEB/Project_Rotaru_Radu_Stefan_Backend/LiverpoolWebsite.DAL/bin/Debug/net8.0/LiverpoolWebsite.DAL.deps.json
+/Users/brinzandarius/Desktop/PWEB/Project_Rotaru_Radu_Stefan_Backend/LiverpoolWebsite.DAL/bin/Debug/net8.0/LiverpoolWebsite.DAL.runtimeconfig.json
+/Users/brinzandarius/Desktop/PWEB/Project_Rotaru_Radu_Stefan_Backend/LiverpoolWebsite.DAL/bin/Debug/net8.0/LiverpoolWebsite.DAL.dll
+/Users/brinzandarius/Desktop/PWEB/Project_Rotaru_Radu_Stefan_Backend/LiverpoolWebsite.DAL/bin/Debug/net8.0/LiverpoolWebsite.DAL.pdb
+/Users/brinzandarius/Desktop/PWEB/Project_Rotaru_Radu_Stefan_Backend/LiverpoolWebsite.DAL/obj/Debug/net8.0/LiverpoolWebsite.DAL.csproj.AssemblyReference.cache
+/Users/brinzandarius/Desktop/PWEB/Project_Rotaru_Radu_Stefan_Backend/LiverpoolWebsite.DAL/obj/Debug/net8.0/LiverpoolWebsite.DAL.GeneratedMSBuildEditorConfig.editorconfig
+/Users/brinzandarius/Desktop/PWEB/Project_Rotaru_Radu_Stefan_Backend/LiverpoolWebsite.DAL/obj/Debug/net8.0/LiverpoolWebsite.DAL.AssemblyInfoInputs.cache
+/Users/brinzandarius/Desktop/PWEB/Project_Rotaru_Radu_Stefan_Backend/LiverpoolWebsite.DAL/obj/Debug/net8.0/LiverpoolWebsite.DAL.AssemblyInfo.cs
+/Users/brinzandarius/Desktop/PWEB/Project_Rotaru_Radu_Stefan_Backend/LiverpoolWebsite.DAL/obj/Debug/net8.0/LiverpoolWebsite.DAL.csproj.CoreCompileInputs.cache
+/Users/brinzandarius/Desktop/PWEB/Project_Rotaru_Radu_Stefan_Backend/LiverpoolWebsite.DAL/obj/Debug/net8.0/LiverpoolWebsite.DAL.dll
+/Users/brinzandarius/Desktop/PWEB/Project_Rotaru_Radu_Stefan_Backend/LiverpoolWebsite.DAL/obj/Debug/net8.0/refint/LiverpoolWebsite.DAL.dll
+/Users/brinzandarius/Desktop/PWEB/Project_Rotaru_Radu_Stefan_Backend/LiverpoolWebsite.DAL/obj/Debug/net8.0/LiverpoolWebsite.DAL.pdb
+/Users/brinzandarius/Desktop/PWEB/Project_Rotaru_Radu_Stefan_Backend/LiverpoolWebsite.DAL/obj/Debug/net8.0/LiverpoolWebsite.DAL.genruntimeconfig.cache
+/Users/brinzandarius/Desktop/PWEB/Project_Rotaru_Radu_Stefan_Backend/LiverpoolWebsite.DAL/obj/Debug/net8.0/ref/LiverpoolWebsite.DAL.dll

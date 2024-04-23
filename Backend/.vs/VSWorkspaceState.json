@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\LiverpoolWebsite",
+    "\\LiverpoolWebsite.BLL",
+    "\\LiverpoolWebsite.BLL\\Managers",
+    "\\LiverpoolWebsite.DAL",
+    "\\LiverpoolWebsite.DAL\\Configurations",
+    "\\LiverpoolWebsite.DAL\\Repositories",
+    "\\LiverpoolWebsite\\Controllers",
+    "\\LiverpoolWebsite\\Properties"
+  ],
+  "SelectedNode": "\\LiverpoolWebsite.DAL\\Repositories\\MatchRepository.cs",
+  "PreviewInSolutionExplorer": false
+}
