@@ -6,10 +6,11 @@
     "\\LiverpoolWebsite.BLL\\Managers",
     "\\LiverpoolWebsite.DAL",
     "\\LiverpoolWebsite.DAL\\Configurations",
+    "\\LiverpoolWebsite.DAL\\Entities",
     "\\LiverpoolWebsite.DAL\\Repositories",
     "\\LiverpoolWebsite\\Controllers",
     "\\LiverpoolWebsite\\Properties"
   ],
-  "SelectedNode": "\\LiverpoolWebsite.DAL\\Repositories\\MatchRepository.cs",
+  "SelectedNode": "\\LiverpoolWebsite.DAL\\Entities\\Role.cs",
   "PreviewInSolutionExplorer": false
 }

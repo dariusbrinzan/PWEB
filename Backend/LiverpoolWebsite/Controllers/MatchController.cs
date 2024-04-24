@@ -25,7 +25,7 @@ namespace LiverpoolWebsite.Controllers
 
         // ednpoint pentru a returna toate meciurile dintr-o competitie (UCL, PL, EFL, etc)
         [HttpGet("{comp}")]
-        [Authorize(Roles = "Admin")]
+        [Authorize]
         public async Task<IActionResult> GetCompMatches(string comp)
         {
             var list = await _matchManager.GetMatches(comp);
@@ -52,6 +52,7 @@ namespace LiverpoolWebsite.Controllers
 
         // endpoint pentru a sterge un meci
         [HttpDelete("delete_match/{match_id}")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> DeleteMatch(int match_id)
         {
             bool res = await _matchManager.DeleteMatch(match_id);
