@@ -13,7 +13,9 @@ namespace LiverpoolWebsite.DAL.Entities
         public int Goals { get; set; }
         public int YellowCards { get; set; }
         public bool RedCard { get; set; }
+        // one to many relation
         public virtual Player Player { get; set; }
+        // one to many relation
         public virtual Match Match { get; set; }
     }
 }
