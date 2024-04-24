@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LiverpoolWebsite.DAL.Models
+namespace LiverpoolWebsite.DAL.DTOs
 {
-    public class TicketModel
+    public class TicketDTO
     {
         public int MatchId { get; set; }
         public String Stand { get; set; }

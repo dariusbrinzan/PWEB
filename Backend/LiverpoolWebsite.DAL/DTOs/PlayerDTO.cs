@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LiverpoolWebsite.DAL.Models
+namespace LiverpoolWebsite.DAL.DTOs
 {
-    public class PlayerModel
+    public class PlayerDTO
     {
         public string Name { get; set; }
         public int Age { get; set; }

@@ -1,6 +1,6 @@
 ﻿using LiverpoolWebsite.DAL.Entities;
 using LiverpoolWebsite.DAL.Interfaces;
-using LiverpoolWebsite.DAL.Models;
+using LiverpoolWebsite.DAL.DTOs;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -53,7 +53,7 @@ namespace LiverpoolWebsite.DAL.Repositories
 
         // functie care returneaza pentru meciul dat ca parametru o lista cu stand-urile si numarul de bilete
         // disponibile in fiecare stand
-        public async Task<List<TotalSeatsModel>> GetMatchTicketsByStand(int match_id)
+        public async Task<List<TotalSeatsDTO>> GetMatchTicketsByStand(int match_id)
         {
 
             var res = await _context.Tickets.Join(_context.Matches, x => x.MatchId, y => y.MatchId, (x, y) => new { id = x.MatchId, std = x.Stand, mDate = y.MatchDate })
@@ -62,11 +62,11 @@ namespace LiverpoolWebsite.DAL.Repositories
                                       .Select(x => new { stand = x.Key, nrTickets = x.Count() })
                                       .ToListAsync();
 
-            var list = new List<TotalSeatsModel>();
+            var list = new List<TotalSeatsDTO>();
 
             for (int i = 0; i < res.Count(); ++i)
             {
-                var tSeats = new TotalSeatsModel
+                var tSeats = new TotalSeatsDTO
                 {
                     Stand = res[i].stand,
                     Seats = res[i].nrTickets

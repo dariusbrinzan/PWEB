@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LiverpoolWebsite.DAL.Models
+namespace LiverpoolWebsite.DAL.DTOs
 {
-    public class FixtureModel
+    public class FixtureDTO
     {
         public string MatchInfo { get; set; }
         public string TeamPhoto { get; set; }
-        public List<TotalSeatsModel> Tickets { get; set; }
+        public List<TotalSeatsDTO> Tickets { get; set; }
 
     }
 }

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LiverpoolWebsite.DAL.Models
+namespace LiverpoolWebsite.DAL.DTOs
 {
-    public class TotalSeatsModel
+    public class TotalSeatsDTO
     {
         public string Stand { get; set; }
         public int Seats { get; set; }

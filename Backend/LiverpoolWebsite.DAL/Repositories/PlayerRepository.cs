@@ -1,6 +1,6 @@
 ﻿using LiverpoolWebsite.DAL.Entities;
 using LiverpoolWebsite.DAL.Interfaces;
-using LiverpoolWebsite.DAL.Models;
+using LiverpoolWebsite.DAL.DTOs;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;

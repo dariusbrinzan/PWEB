@@ -1,5 +1,5 @@
 ﻿using LiverpoolWebsite.DAL.Entities;
-using LiverpoolWebsite.DAL.Models;
+using LiverpoolWebsite.DAL.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;

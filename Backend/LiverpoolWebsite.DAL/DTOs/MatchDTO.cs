@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LiverpoolWebsite.DAL.Models
+namespace LiverpoolWebsite.DAL.DTOs
 {
-    public class MatchModel
+    public class MatchDTO
     {
         public bool HomeOrAway { get; set; }
         public string Opponent { get; set; }
