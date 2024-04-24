@@ -10,6 +10,7 @@ namespace LiverpoolWebsite.DAL.Entities
     {
         public int CompetitionId { get; set; }
         public string Name { get; set; }
+        // one to many
         public ICollection<Match> Matches { get; set; }
     }
 }
