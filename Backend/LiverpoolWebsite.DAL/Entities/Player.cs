@@ -15,6 +15,7 @@ namespace LiverpoolWebsite.DAL.Entities
         public string Position { get; set; }
         public int ShirtNumber { get; set; }
         public string PhotoUrl { get; set; }
+        // one to many relation
         public virtual ICollection<Appearance> Appearances { get; set; }
     }
 }

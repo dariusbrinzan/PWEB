@@ -18,9 +18,13 @@ namespace LiverpoolWebsite.DAL.Entities
         public int GoalsAgainst { get { return _goalsAgainst; } set { _goalsAgainst = value; } }
         public int CompetitionId { get; set; }
         public DateTime MatchDate { get; set; }
+        // many to one relation
         public virtual Team Team { get; set; }
+        // many to one relation
         public virtual Competition Competition { get; set; }
+        // one to many relation
         public virtual ICollection<Ticket> Tickets { get; set; }
+        // one to many relation
         public virtual ICollection<Appearance> Appearances { get; set; }
     }
 }
