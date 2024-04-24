@@ -1,5 +1,5 @@
 ﻿using LiverpoolWebsite.BLL.Interfaces;
-using LiverpoolWebsite.BLL.Models;
+using LiverpoolWebsite.BLL.DTOs;
 using LiverpoolWebsite.DAL;
 using LiverpoolWebsite.DAL.Entities;
 using Microsoft.AspNetCore.Identity;
@@ -31,9 +31,9 @@ namespace LiverpoolWebsite.BLL.Managers
         }
 
         // manager pentru login, returneaza daca login-ul s-a realizat cu succes sau nu
-        public async Task<LoginResult> Login(LoginModel loginModel)
+        public async Task<LoginResult> Login(LoginDTO loginDTO)
         {
-            var user = await _userManager.FindByEmailAsync(loginModel.Email);
+            var user = await _userManager.FindByEmailAsync(loginDTO.Email);
             if (user == null)
                 return new LoginResult
                 {
@@ -41,7 +41,7 @@ namespace LiverpoolWebsite.BLL.Managers
                 };
             else
             {
-                var result = await _signInManager.CheckPasswordSignInAsync(user, loginModel.Password, false);
+                var result = await _signInManager.CheckPasswordSignInAsync(user, loginDTO.Password, false);
                 if (result.Succeeded)
                 {
                     var token = await _tokenHelper.CreateAccessToken(user);
@@ -67,26 +67,26 @@ namespace LiverpoolWebsite.BLL.Managers
         }
 
         // manager pentru inregistrare, returneaza daca aceasta s-a realizat cu succes sau nu
-        public async Task<bool> Register(RegisterModel registerModel)
+        public async Task<bool> Register(RegisterDTO registerDTO)
         {
             var count = await _context.Users.FirstOrDefaultAsync();
             // primul user introdus in baza de date primeste rolul de Admin
             if (count != null)
-                registerModel.Role = "User";
+                registerDTO.Role = "User";
             else
-                registerModel.Role = "Admin";
+                registerDTO.Role = "Admin";
 
             var user = new User
             {
-                Email = registerModel.Email,
-                UserName = registerModel.Email
+                Email = registerDTO.Email,
+                UserName = registerDTO.Email
             };
 
-            var result = await _userManager.CreateAsync(user, registerModel.Password);
+            var result = await _userManager.CreateAsync(user, registerDTO.Password);
 
             if (result.Succeeded)
             {
-                await _userManager.AddToRoleAsync(user, registerModel.Role);
+                await _userManager.AddToRoleAsync(user, registerDTO.Role);
                 return true;  
             }
             else
@@ -96,14 +96,14 @@ namespace LiverpoolWebsite.BLL.Managers
         }
 
         // manager pentru refresh token
-        public async Task<string> Refresh(RefreshModel refreshModel)
+        public async Task<string> Refresh(RefreshDTO refreshDTO)
         {
-            var principal = _tokenHelper.GetPrincipalFromExpiredToken(refreshModel.AccessToken);
+            var principal = _tokenHelper.GetPrincipalFromExpiredToken(refreshDTO.AccessToken);
             var username = principal.Identity.Name;
 
             var user = await _userManager.FindByEmailAsync(username);
 
-            if (user.RefreshToken != refreshModel.RefreshToken)
+            if (user.RefreshToken != refreshDTO.RefreshToken)
                 return "Bad Refresh";
 
             var newJwtToken = await _tokenHelper.CreateAccessToken(user);

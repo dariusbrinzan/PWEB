@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LiverpoolWebsite.BLL.Models
+namespace LiverpoolWebsite.BLL.DTOs
 {
     public class LoginResult
     {

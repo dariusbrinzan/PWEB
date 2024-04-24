@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LiverpoolWebsite.BLL.Models
+namespace LiverpoolWebsite.BLL.DTOs
 {
-    public class RefreshModel
+    public class RefreshDTO
     {
         public string AccessToken { get; set; }
         public string RefreshToken { get; set; }
