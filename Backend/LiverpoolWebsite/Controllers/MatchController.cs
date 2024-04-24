@@ -24,6 +24,8 @@ namespace LiverpoolWebsite.Controllers
         }
 
         // ednpoint pentru a returna toate meciurile dintr-o competitie (UCL, PL, EFL, etc)
+        // apel catre manager -> get matches from competition
+        // get DTO -> send HTTP response
         [HttpGet("{comp}")]
         [Authorize]
         public async Task<IActionResult> GetCompMatches(string comp)
