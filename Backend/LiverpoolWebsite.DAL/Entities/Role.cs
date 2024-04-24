@@ -9,6 +9,7 @@ namespace LiverpoolWebsite.DAL.Entities
 {
     public class Role : IdentityRole<int>
     {
+        // one to many relation
         public virtual ICollection<UserRole> UserRoles { get; set; }
     }
 }
