@@ -10,7 +10,9 @@ namespace LiverpoolWebsite.DAL.Entities
     {
         public int TicketId { get; set; }
         public int MatchId { get; set; }
+        // many to one
         public String Stand { get; set; }
+        // many to one relation
         public virtual Match Match { get; set; }
     }
 }

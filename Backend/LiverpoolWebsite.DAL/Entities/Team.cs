@@ -12,6 +12,7 @@ namespace LiverpoolWebsite.DAL.Entities
         public string Name { get; set; }
         public string photoUrl { get; set; }
         public int StadiumId { get; set; }
+        // one to one relation
         public virtual Stadium Stadium {get; set; }
     }
 }
