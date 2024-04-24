@@ -3,14 +3,13 @@
     "",
     "\\LiverpoolWebsite",
     "\\LiverpoolWebsite.BLL",
+    "\\LiverpoolWebsite.BLL\\DTOs",
     "\\LiverpoolWebsite.BLL\\Managers",
     "\\LiverpoolWebsite.DAL",
-    "\\LiverpoolWebsite.DAL\\Configurations",
-    "\\LiverpoolWebsite.DAL\\Entities",
     "\\LiverpoolWebsite.DAL\\Repositories",
     "\\LiverpoolWebsite\\Controllers",
     "\\LiverpoolWebsite\\Properties"
   ],
-  "SelectedNode": "\\LiverpoolWebsite.DAL\\Entities\\Role.cs",
+  "SelectedNode": "\\LiverpoolWebsite\\LiverpoolWebsite.sln",
   "PreviewInSolutionExplorer": false
 }

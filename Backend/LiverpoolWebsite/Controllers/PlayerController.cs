@@ -25,7 +25,7 @@ namespace LiverpoolWebsite.Controllers
 
         // endpoint pentru a returna toti jucatorii de pe o anumita pozitie
         [HttpGet("{pos}")]
-        [Authorize(Roles = "Admin")] // Asigură-te că utilizatorii sunt autentificați pentru a accesa acest endpoint
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> GetByPos(string pos)
         {
             var list = await _playerManager.GetPlayers(pos);
@@ -34,7 +34,7 @@ namespace LiverpoolWebsite.Controllers
 
         // endpoint pentru a modifica un jucator
         [HttpPut("update_player")]
-        [Authorize(Roles = "Admin")] // Doar utilizatorii cu rolul de Admin pot modifica jucători
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> UpdatePlayer([FromBody] Player player)
         {
             bool res = await _playerManager.UpdatePlayer(player);
@@ -43,7 +43,7 @@ namespace LiverpoolWebsite.Controllers
 
         // endpoint pentru a adauga un jucator
         [HttpPost("add_player")]
-        [Authorize(Roles = "Admin")] // Doar utilizatorii cu rolul de Admin pot adăuga jucători
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> AddPlayer([FromBody] Player player)
         {
             await _playerManager.CreatePlayer(player);
@@ -52,7 +52,7 @@ namespace LiverpoolWebsite.Controllers
 
         // endpoint pentru a sterge un jucator
         [HttpDelete("delete_player/{player_id}")]
-        [Authorize(Roles = "Admin")] // Doar utilizatorii cu rolul de Admin pot șterge jucători
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> DeletePlayer(int player_id)
         {
             bool res = await _playerManager.DeletePlayer(player_id);
