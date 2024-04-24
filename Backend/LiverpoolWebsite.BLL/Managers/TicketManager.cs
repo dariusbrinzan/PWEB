@@ -1,6 +1,6 @@
 ﻿using LiverpoolWebsite.BLL.Interfaces;
 using LiverpoolWebsite.DAL.Interfaces;
-using LiverpoolWebsite.DAL.Models;
+using LiverpoolWebsite.DAL.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -36,11 +36,11 @@ namespace LiverpoolWebsite.BLL.Managers
         // manager care pentru fiecare meci nedisputat returneaza
         // informatii: data, stadionul, echipa adversa, numarul de 
         // bilete disponibile pe fiecare stand
-        public async Task<List<FixtureModel>> GetTickets()
+        public async Task<List<FixtureDTO>> GetTickets()
         {
             var matches = await _ticketRepo.GetFutureMatches();
 
-            var res = new List<FixtureModel>();
+            var res = new List<FixtureDTO>();
 
             foreach(var match in matches)
             {
@@ -48,7 +48,7 @@ namespace LiverpoolWebsite.BLL.Managers
 
                 var tick = await _ticketRepo.GetMatchTicketsByStand(match.MatchId);
 
-                var fixt = new FixtureModel { 
+                var fixt = new FixtureDTO { 
                     MatchInfo = matchInfo, 
                     TeamPhoto = match.Team.photoUrl, 
                     Tickets = tick 

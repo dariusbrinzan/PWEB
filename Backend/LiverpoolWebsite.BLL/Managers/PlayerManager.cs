@@ -1,7 +1,7 @@
 ﻿using LiverpoolWebsite.BLL.Interfaces;
 using LiverpoolWebsite.DAL.Entities;
 using LiverpoolWebsite.DAL.Interfaces;
-using LiverpoolWebsite.DAL.Models;
+using LiverpoolWebsite.DAL.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,14 +20,14 @@ namespace LiverpoolWebsite.BLL.Managers
         }
 
         // manager care ia toti jucatorii de pe o anumita pozitie
-        public async Task<List<PlayerModel>> GetPlayers(string pos)
+        public async Task<List<PlayerDTO>> GetPlayers(string pos)
         {
             var players = await _playerRepo.GetPlayersByPosition(pos);
-            var list = new List<PlayerModel>();
+            var list = new List<PlayerDTO>();
 
             foreach(var player in players)
             {
-                var playerModel = new PlayerModel
+                var playerModel = new PlayerDTO
                 {
                     Name = player.Name,
                     Age = (DateTime.Now.Month < player.BirthDate.Month || (DateTime.Now.Month == player.BirthDate.Month && DateTime.Now.Day < player.BirthDate.Day)

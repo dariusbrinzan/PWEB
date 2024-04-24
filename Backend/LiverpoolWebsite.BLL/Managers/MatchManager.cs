@@ -1,7 +1,7 @@
 ﻿using LiverpoolWebsite.BLL.Interfaces;
 using LiverpoolWebsite.DAL.Entities;
 using LiverpoolWebsite.DAL.Interfaces;
-using LiverpoolWebsite.DAL.Models;
+using LiverpoolWebsite.DAL.DTOs;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -23,7 +23,7 @@ namespace LiverpoolWebsite.BLL.Managers
         // manager pentru a lua toate meciurile care s-au disputat la o anumita
         // competite(in cazul in care comp != "fixtures"), sau toate meciurile
         // care inca nu s-au disputat
-        public async Task<List<MatchModel>> GetMatches(string comp)
+        public async Task<List<MatchDTO>> GetMatches(string comp)
         {
             if (comp == "fixtures")
             {
@@ -59,13 +59,13 @@ namespace LiverpoolWebsite.BLL.Managers
 
         // functie privata care transforma o lista de Match intr-o lista
         // de MatchModel
-        private List<MatchModel> convertToList(List<Match> matches)
+        private List<MatchDTO> convertToList(List<Match> matches)
         {
-            var list = new List<MatchModel>();
+            var list = new List<MatchDTO>();
 
             foreach (var match in matches)
             {
-                var matchModel = new MatchModel
+                var matchModel = new MatchDTO
                 {
                     HomeOrAway = match.HomeOrAway,
                     Opponent = match.Team.Name,
