@@ -1,7 +1,7 @@
 ﻿using LiverpoolWebsite.BLL.Interfaces;
 using LiverpoolWebsite.DAL.Entities;
 using LiverpoolWebsite.DAL.Interfaces;
-using LiverpoolWebsite.DAL.Models;
+using LiverpoolWebsite.DAL.DTOs;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;

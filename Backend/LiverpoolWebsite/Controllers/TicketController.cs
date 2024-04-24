@@ -1,6 +1,6 @@
 ﻿using LiverpoolWebsite.BLL.Interfaces;
 using LiverpoolWebsite.DAL.Interfaces;
-using LiverpoolWebsite.DAL.Models;
+using LiverpoolWebsite.DAL.DTOs;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -27,7 +27,7 @@ namespace LiverpoolWebsite.Controllers
         [Authorize]
         public async Task<IActionResult> GetMatchTickets()
         {
-            List<FixtureModel> list = await _ticketManager.GetTickets();
+            List<FixtureDTO> list = await _ticketManager.GetTickets();
             return Ok(list);
         }
 
